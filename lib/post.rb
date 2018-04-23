@@ -4,11 +4,11 @@ class Post
 
   def initialize(title)
     @title=title
-    @author=self.author.name
+    @author=self.author
   end
 
   def author_name
-    @author
+    @author.name
   end
 
 end
