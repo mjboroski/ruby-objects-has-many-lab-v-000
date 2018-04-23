@@ -1,7 +1,7 @@
 class Author
 
   attr_accessor :name,:posts
-  @@song_count=0
+  @@post_count=0
 
   def initialize(name)
     @name=name
@@ -10,17 +10,17 @@ class Author
 
   def add_post(post)
     @posts<<post
-    post.artist=self
+    post.author=self
     self.post_count += 1
   end
 
   def add_post_by_title(post_title)
-    song= Post.new("#{post_title}")
-    add_post(song)
+    post= Post.new("#{post_title}")
+    add_post(post)
   end
 
-  def song_count
-    self.song_count
+  def post_count
+    self.post_count
   end
 
 
